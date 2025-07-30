@@ -21,6 +21,7 @@ class CustomUserManager(BaseUserManager):
 # User model inheriting from AbstractUser
 class User(AbstractUser):
     # Additional fields
+    username = None  # Remove username field
     email = models.EmailField(unique=True, db_index=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
