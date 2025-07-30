@@ -12,6 +12,6 @@ class UserAdmin(admin.ModelAdmin):
 # UserProfile admin registration
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'address')
+    list_display = ('user', 'address', 'profile_picture')
     search_fields = ('user__email', 'address')
     ordering = ('user__email',)    
